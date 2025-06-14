@@ -1,0 +1,143 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+   <!-- <button onclick="agemarks()">marks and age</button>
+    <p id="gradeandscholarship"></p> -->
+    <button onclick="logdevice()" >Checking the device</button>
+    <p id="logindevice"></p>
+    <button onclick="discount()">Discount</button>
+   <p id="discount"></p>
+   <button onclick="Temperature()">temperture analaylis</button>
+   <p id="Temperatur"></p>
+  <script>
+
+//eligibility for marks and age
+
+
+// function checkEligibility(marks, age) {
+//     marks = parseFloat(marks);
+//     age = parseInt(age);
+
+//     if (isNaN(marks) || isNaN(age)) {
+//         console.log("Invalid input. Please enter numbers only.");
+//         return;
+//     }
+
+//     if (marks < 0 ||marks > 100) {
+//         console.log("Invalid marks. Please enter a value between 0 and 100.");
+//         return;
+//     }
+
+//     if (age < 0) {
+//         console.log("Invalid age. Please enter a non-negative value.");
+//         return;
+//     }
+
+//     if (marks >= 90) {
+//         console.log("Grade A");
+//          if (age < 18) {
+//             console.log("Eligible for scholarship");
+//         }
+//     } else if (marks >= 70 && marks < 90) {
+//         console.log("Grade B");
+//         if (age > 21) {
+//           console.log("Try again next year");
+//         }
+//     } else {
+//         console.log("Fail");
+//     }
+// }
+// let marks = prompt("Enter your marks (0-100):");
+// let age = prompt("Enter your age:");
+// checkEligibility(marks, age);
+
+
+//checking  device
+
+function logdevice() {
+            let loginstatus =prompt("enter the status(yes or no):")
+            let logindevice =prompt("enter the device(mobile or desktop:)")
+            message="";
+           
+            if(loginstatus==="yes"){
+                 if(logindevice==="mobile"){
+                    message="Mobile Dashboard";
+                 }
+                 else{
+                    message="Desktop Dashboard";
+                 }
+                 } 
+            else{
+                message="Please login"
+            }
+
+            document.getElementById("logindevice").innerText=message
+        }
+
+//Nested discount offer
+
+function discount(){
+    let cartvalue=prompt("Enter the value : ")
+    let primestatus=prompt("Enter the  prime or notprime")
+    let coupenstatus=prompt("Enter the  applied or notapplied")
+    message=""
+    if(cartvalue>500){
+        if(prime===prime){
+            message=prompt("20 percent discount")
+        }
+        else{
+           if(coupenstatus===applied){
+            message=prompt("10 percent discount")
+           }
+           else{
+            message=prompt("5 percent discount")
+           }
+        }
+            
+        }
+        else{
+            message="No discount"
+        }
+        document.getElementById("discount").innerHTML=message
+    }
+
+//temperature analyzer
+
+function Temperature(){
+            let temperature =prompt("enter temperature in celsius:");
+             let timeofday =prompt("enter time of day afternoon or not:");
+            message=""
+            if(temperature>35){
+               
+                if(timeofday=="afternoon"){
+                    message="Extreme Heat Warning";
+                }
+                else{
+                    message="Hot Weather";
+                }
+            }
+            else if(temperature>25 && temperature<35){
+                message=" normal";
+            }
+            else{
+                message="Cold";
+            }
+            document.getElementById("Temperatur").innerHTML=message
+
+        }
+
+//Ticket booking
+
+function ticket(){
+
+}
+
+</script>
+</body>
+</html>
