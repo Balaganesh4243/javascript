@@ -1,0 +1,126 @@
+<<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>miniprofilecard</title>
+    <link rel="stylesheet" href="miniprofilecard.css">
+</head>
+<body>
+<!-- 2nd method only placing one div and giving id to div, it linked to 2nd method using for  -->
+     <div id="miniprofile"></div>
+
+
+     <!-- 1st method writing html, and giving id to tags, it linked to 1st method and 1st method using for   -->
+
+      <!-- <div class="profilecards">
+    <div class="miniprofilecard0">
+        <div class="details">
+    <h2 id="name0"></h2>
+    <h2 id="age0"></h2>
+    <h2 id="location0"></h2></div>
+    <div class="image">
+        <img src="./assets/WhatsApp Image 2025-06-13 at 12.38.34 PM.jpeg" alt="myimage">
+    </div>
+
+    </div>
+    <div class="miniprofilecard1">
+        <div class="details">
+    <h2 id="name1"></h2>
+    <h2 id="age1"></h2>
+    <h2 id="location1"></h2></div>
+    <div class="image">
+        <img src="./assets/aruna akka.jpeg" alt="aruna akka">
+    </div>
+
+    </div>
+    <div class="miniprofilecard2">
+        <div class="details">
+    <h2 id="name2"></h2>
+    <h2 id="age2"></h2>
+    <h2 id="location2"></h2></div>
+    <div class="image">
+        <img src="./assets/bala ganesh anna.jpeg" alt="bala ganesh anna">
+    </div>
+
+    </div>
+    <div class="miniprofilecard3">
+        <div class="details">
+    <h2 id="name3"></h2>
+    <h2 id="age3"></h2>
+    <h2 id="location3"></h2></div>
+    <div class="image">
+        <img src="./assets/sir2.jpeg" alt="raghava sir">
+    </div>
+
+    </div> 
+     </div>   -->
+    <script>
+            // Iam creating an object, declaring a variable for array and giving elements.
+           
+          
+            let persondetails=[{
+                NAME: " KIREETYVARMA",
+                AGE: " 19",
+                LOCATION: "HYDERABAD"
+               
+            }
+            
+            
+            ,{
+                NAME: " ARUNASRI  ",
+                AGE: " 55",
+                LOCATION: " KODHADA"
+
+            },{
+                NAME: " BALAGANESH",
+                AGE: " 98",
+                LOCATION: " GUNTUR"
+            },{
+                NAME: "RAGHAVENDRA ",
+                AGE: " 20",
+                LOCATION: " KADAPA"  
+
+
+            }
+        ] 
+
+
+        for (let i = 0; i < persondetails.length; i++) {
+            let finaldetails=document.getElementById("miniprofile")
+         // 1st method using for and i 
+        //   document.getElementById("name"+i).innerText=persondetails[i].NAME
+        //   document.getElementById("age"+i).innerText=persondetails[i].AGE
+        //   document.getElementById("location"+i).innerText=persondetails[i].LOCATION
+
+
+          // 2nd method using for , directly writing html in js 
+        // 
+            finaldetails.innerHTML+=`<div>
+                <div class="details">
+                 <h2 id="name0">${persondetails[i].NAME}</h2>
+    <h2 id="age0">${persondetails[i].AGE}</h2>
+    <h2 id="location0">${persondetails[i].LOCATION}</h2></div>
+    <div class="image">
+        <img src="./assets/WhatsApp Image 2025-06-13 at 12.38.34 PM.jpeg" alt="myimage">
+    </div>
+                
+                </div>`
+        }
+        
+       // first method
+        //   document.getElementById("name0").innerText=persondetails[0].NAME
+        //   document.getElementById("age0").innerText=persondetails[0].AGE
+        //   document.getElementById("location0").innerText=persondetails[0].LOCATION
+        //   document.getElementById("name1").innerText=persondetails[1].NAME
+        //   document.getElementById("age1").innerText=persondetails[1].AGE
+        //   document.getElementById("location1").innerText=persondetails[1].LOCATION
+        //   document.getElementById("name2").innerText=persondetails[2].NAME
+        //   document.getElementById("age2").innerText=persondetails[2].AGE
+        //   document.getElementById("location2").innerText=persondetails[2].LOCATION
+        //   document.getElementById("name3").innerText=persondetails[3].NAME
+        //   document.getElementById("age3").innerText=persondetails[3].AGE
+        //   document.getElementById("location3").innerText=persondetails[3].LOCATION
+    </script>
+</body>
+</html>
