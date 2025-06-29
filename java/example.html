@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task1</title>
+</head>
+<body>
+    <!-- <button onclick="agemarks()">marks and age</button> -->
+    <!-- <p id="gradeandscholarship"></p> -->
+    <!-- <button onclick="logdevice()">login and device</button> -->
+    <!-- <p id="logindevice"></p> -->
+    <!-- <button onclick="valstatcoup()">cartvalue primestatus coupon</button> -->
+    <!-- <p id="discount"></p> -->
+    <!-- <button onclick=""></button>  -->
+    <!-- <p id=""></p> -->
+    <script> 
+
+    //question1,  Student Grade and Scholarship Eligibility
+
+        /*function agemarks(){
+            let marks=prompt("enter the marks:")
+            let age=prompt("enter the age:");
+            message1=""
+            message2=""
+            if(marks>=90){
+                message1="GradeA";
+                if(age<18){
+                    message2="Eligible for scholarship";
+                }                
+            }
+            else if(marks>70&&marks<89){
+                message1="GradeB";
+                if(age>21){
+                    message2="Try again next year";
+                }
+            }
+            else{
+                message1="Fail";
+            }
+            
+           document.getElementById("gradeandscholarship").innerText=message1+"  "+message2;
+          
+
+        }*/
+
+
+        // question2,  Login System with Device Check
+       /* function logdevice() {
+            let loginstatus =prompt("enter the status(yes or no):")
+            let logindevice =prompt("enter the device(mobile or desktop:)")
+            message="";
+           
+            if(loginstatus=="yes"){
+                 if(logindevice=="mobile"){
+                    message="Mobile Dashboard";
+                 }
+                 else{
+                    message="Desktop Dashboard";
+                 }
+
+            } 
+            else{
+                message="Please login"
+            }
+
+            document.getElementById("logindevice").innerText=message
+            
+        }*/
+
+        //question 3,  function logdevice() 
+
+
+        /* function valstatcoup() {
+            let cartvalue = prompt("enter cart value:");
+            let primestatus = prompt("enter prime status(prime or notprime):");
+            //let coupon = prompt("enter coupon availability(applied or not ):");
+            message=""
+            if(cartvalue>500){
+                if(primestatus=="prime"){
+                    message="20 percent discount";
+                }
+                else{
+                    let coupon = prompt("enter coupon availability(applied or not ):");
+                    if(primestatus=="notprime"&&coupon=="applied"){
+                        message="10 percent discount";
+                    }
+                    else{
+                        if(primestatus=="")
+                           message="5 percent discount";
+                    }
+                }
+                
+            } 
+            else{
+                
+                    message="No discount";
+                
+                
+            } 
+            
+            document.getElementById("discount").innerText=message 
+         }   */
+
+         // question 4 , Temperature Analyzer
+
+         /*function Temperature(){
+            let temperature =prompt("enter temperature in celsius:");
+            message=""
+            if(temperature>35){
+                let timeofday =prompt("enter time of day:");
+                if(timeofday==="afternoon"){
+                    message="Extreme Heat Warning";
+                }
+                else{
+                    message="Hot Weather";
+                }
+            }
+            else if(temperature>25&&temperature<35){
+                message=" normal"
+            }
+            else{
+                message="Cold"
+            }
+            document.getElementById("tempandtime").innerText=message
+
+
+         }*/
+
+         // question 5 , Train Ticket Fare Calculator
+
+         /*function Ticket() {
+            let destination =prompt("is it metro city(yes or no:)");
+            message="";
+            if(destination==="yes"){
+                let passenger=prompt("is he is senior or student");
+                if(passenger==="senior"){
+                    message="40 percent off";
+                }
+                else{
+                    message="Full fare";
+                }
+            }
+            else{
+                let passenger=prompt("is he senior or student");
+                if (passenger==="student") {
+                    message="50 percent off";
+                } else {
+                    message="full fare";
+                }
+            }
+            document.getElementById("ticketfarecalci").innerText=message
+         }*/
+
+         //question 6, Smart Greeting App
+
+         /*function Greeting() {
+            let language=prompt("enter language(eng,tel,fr):")
+            let timeofday=prompt("enter time")
+            message=""
+            switch (language) {
+             
+            case "eng":
+                if (timeofday === "morning") {
+                    message = "Good morning";
+                } else {
+                    message = "Good evening";
+                }
+                break;
+
+            case "tel":
+                if (timeofday === "morning") {
+                    message = "Shubodhayam";
+                } else {
+                    message = "Shubha Saayantram";
+                }
+                break;
+
+            case "fr":
+                if (timeofday === "morning") {
+                    message = "Bonjour";
+                } else {
+                    message = "Bonsoir";
+                }
+                break;
+
+            }
+            document.getElementById("Greetingapp").innerText=message
+        }*/
+
+        //question 7 , Currency Converter App
+
+        /*let currency=prompt("enter currency(USD, EUR, INR)");
+        let amount=prompt("enter the amount");
+        message="";
+        switch (currency) {
+            case "USD":
+                if (amount>1000) {
+                    message="Add bonus amount";
+                    
+                }
+                else{
+                    message='standard conversion';
+                }
+                
+                break;
+        
+            case "EUR":
+                if (amount>1000) {
+                    message="Add bonus amount";
+                    
+                } else {
+                    message="standard conversion";
+                }
+                break;
+            case "INR":
+                if(amount>1000){
+                    message="add bonus amount";
+                }
+                else{
+                    message="add bonus amount"
+                }
+
+        }
+        console.log(message);*/
+
+        //question 8 ,Role and Department Access Control
+
+        /*let role = prompt("what is the role (admin, manager, employee)");
+        let department= prompt("enter department");
+        message="";
+        switch (role) {
+            case "admin":
+                if (department==="HR") {
+                    message="Access granted";
+                    
+                } else {
+                    message="View Only Access";
+                }
+                break;
+            case "manager":
+                if (department==="HR") {
+                    message="Access granted";
+                    
+                } else {
+                    message="View Only Access";
+                }
+                break;
+
+            case "employee":
+                if (department==="HR") {
+                    message="Access granted";
+                    
+                } else {
+                    message="View Only Access";
+                }
+                break;    
+            
+        }
+        console.log(message);*/
+        
+        //question 9, Weather Advisory System
+
+        /*let weathertype=prompt("enter weather(rainy, sunny, snow)");
+        let temperature=prompt("enter the temperature(above threshold or below threshold)");
+        message="";
+        switch (weathertype) {
+            case "rainy":
+                if (temperature==="below threshold") {
+                    message="stay inside";
+                } else {
+                    message="wear protection";
+                }
+                
+                break;
+        
+            case "rainy":
+                if (temperature==="below threshold") {
+                    message="stay inside";
+                } else {
+                    message="wear protection";
+                }
+                
+                break;
+            case "snow":
+                if (temperature==="below threshold") {
+                    message="stay inside";
+                } else {
+                    message="wear protection";
+                }
+                
+                break;    
+        
+        
+        }
+        console.log(message);*/
+
+
+        //question 10,  Mobile Plan Chooser
+
+        /*let mobileplan=prompt("enter plan(basic,standard,premium)");
+        let user=prompt("enter the user designation");
+        message="";
+
+        switch (mobileplan) {
+            case "basic":
+                if(user==="student"){
+                    message="Extra student discount applied";
+                }
+                else{
+                    message="Standard pricing applied";
+                }
+                break;
+            case "standard":
+                if(user==="student"){
+                    message="Extra student discount applied";
+                }
+                else{
+                    message="Standard pricing applied";
+                }
+                break;    
+            case "premium":
+                if(user==="student"){
+                    message="Extra student discount applied";
+                }
+                else{
+                    message="Standard pricing applied";
+                }
+                break;        
+        
+            
+        }
+        console.log(message);*/
+
+
+       // question 11 ,  Dynamic Offer Display
+
+       /*let cartvalue=prompt("enter the cart value:");
+      
+       message="";
+       if(cartvalue>1000){
+         let primestatus=prompt("yes or no");
+         if (primestatus==="yes") {
+            message="Free delivery and 20 percent discount"
+            
+         } else {
+            message="Free Delivery and 10 percent Discount"
+            
+         }
+         
+       }
+       else if(cartvalue>500&&cartvalue<1000){
+        let primestatus=prompt("yes or no");
+        if (primestatus==="yes") {
+            message="10 percent Discount";
+        }
+        else{
+            message="Delivery Charge is 50 rupees";
+        }
+          
+
+       }
+       else{
+        if(cartvalue<500){
+            message="No offers available";
+        }
+       } console.log(message);*/
+
+       // question 12 ,  Login System with 2-Step Verification
+
+       /*let username=prompt("enter username");
+       let password=prompt("enter password");
+       message="";
+       if(username==="kireety"&&password==="shivani"){
+        let otp=prompt("enter otp");
+        if (otp==="17424") {
+            message="Login successfull";
+            
+        } else {
+            message="Invalid otp";
+            
+        }
+       }
+       else{
+        message="invalid credentials";
+       }console.log(message);*/
+
+       // question 13 ,  Theme Changer with Auto Detection
+
+       /*let themeoption = prompt("select option(light,dark,auto)");
+       message="";
+       if(themeoption==="light"){
+        message="light theme applied";
+       }
+       else if(themeoption==="dark"){
+        message="dark theme applied";
+       }
+       else if(themeoption==="auto"){
+        let time=prompt("enter time(before 6pm or after )")
+        if(time==="before6"){
+            message="Apply light theme";
+        }
+        else{
+            message="Apply dark theme";
+        }
+       }console.log(message);*/
+
+
+       //question 14  Course Recommendation System
+
+       /*let age=prompt("enter age");
+       if(age<18){
+        message="Try Beginner bootcamp";
+       }
+       else{
+        let areaofinterest=prompt("enter interest(coding,design,marketing)");
+        switch(areaofinterest){
+            case "coding":
+                message="Full Stack Development Course";
+               break; 
+            case "design":
+                message="UI UX Design Course";
+               break;
+            case "marketing":
+                message="Digital Marketing Course";
+               break;   
+        }
+       }console.log(message);*/
+
+
+       // question 15 , Language and Region Selector
+
+       /*let preflanguage=prompt("enter language(eng,hin,fra,es)");
+       let region=prompt("enter region(india or other)");
+       message="";
+       switch (preflanguage) {
+        case "eng":
+            if (region==="india") {
+                message="hello namasthe";   
+            }
+            
+           break;
+        case "hin":
+            message="Namaste";
+           break;
+        case "fra":
+            message="Bonjour";
+           break;
+        case "es":
+            message="hola";
+          break;              
+       }console.log(message);*/
+
+       // question 16 , Delivery Time Estimator
+
+       /*let producttype=prompt("enter producttype(fragile,express,standard)");
+       let citytype=prompt("enter the citytype(metro or nonmetro)");
+       message="";
+       switch (producttype) {
+        case "fragile":
+            if (citytype==="metro") {
+                message="2days";
+                
+            } else if(citytype==="nonmetro") {
+                message="4days"
+            }
+            
+            break;
+        case "express":
+            if(citytype==="metro"){
+                message="1day";
+
+            } else if(citytype==="nonmetro"){
+                message="2days";
+            }
+           break; 
+        case "standard":
+            if(citytype===metro){
+                message="3days";
+            }  
+            else if(citytype==="nonmetro"){
+                message="5days";
+            }
+       }console.log(message);*/
+
+       //question 17,   Bill Splitter with Promo Logic
+
+       /*let totalbillamount=prompt("enter the bill amount");
+       let promocode=prompt("enter the code");
+       message="";
+       if(promocode==="FLAT50"){
+        let numberofpeople=prompt("enter no.of people");
+        let finalbill=totalbillamount-50;
+        let personbill=finalbill/numberofpeople;
+        console.log(personbill);
+       }
+       else if(promocode==="PERCENT10"){
+        let numberofpeople=prompt("enter no.of people");
+        let finalbill=totalbillamount-totalbillamount*0.1;
+        let personbill=finalbill/numberofpeople;
+        console.log(personbill);
+        
+       }
+       else{
+        message="no discount";
+       }*/
+
+       // question 18 , Multi-Currency Checkout with Promo
+
+       /*let amount=prompt("enter the amount");
+       let currency=prompt("enter the currency(INR, USD, EUR)");
+       let promocode=prompt("enter the promocode");
+       switch (currency) {
+        case "INR":
+            if (promocode==="FLAT100") {
+                let payableamount=amount-100;
+                console.log(payableamount);  
+            }
+            else if(promocode==="PERCENT10"){
+                let payableamount=amount-amount*0.1;
+                console.log(payableamount);
+            }
+            break;
+        case "USD":
+            if (promocode==="FLAT100") {
+                let payableamount=amount-100;
+                console.log(payableamount);  
+            }
+            else if(promocode==="PERCENT10"){
+                let payableamount=amount-amount*0.1;
+                console.log(payableamount);
+            }
+            break;    
+        case "EUR":
+            if (promocode==="FLAT100") {
+                let payableamount=amount-100;
+                console.log(payableamount);  
+            }
+            else if(promocode==="PERCENT10"){
+                let payableamount=amount-amount*0.1;
+                console.log(payableamount);
+            }
+            break;
+       
+       }*/
+
+
+       // question 19 ,  Student Result and Feedback Generator
+       
+       /*let marks=prompt("enter the marks");
+       message="";
+       if(marks>90){
+        let section=prompt("enter the section(A or B)");
+        if(section==="A"){
+            message="outstanding in section A";
+        }
+        else if (section==="B"){
+            message="excellent in section B";
+        }
+
+       }
+       else if(marks>70&&marks<89){
+        message="Good performance";
+       }
+       else{
+         if(marks<70){
+            message="Needs improvement";
+         }
+       }console.log(message);*/
+
+
+       //question 20 ,  Age Group Greeting
+
+       let age=prompt("enter the age ");
+       message="";
+       if(age<13){
+         let gender=prompt("enter gender");
+         if (gender==="male") {
+            message="Hey young boy";
+            
+         } else {
+             if(gender==="female"){
+                message="Hey little girl";
+             }
+         }
+       }
+       else if(age>13&&age<19){
+        message="Hello teen";
+       }
+       else{
+          if(age>=20){
+            message="Welcome adult";
+          }
+       }console.log(message);
+       
+       
+       
+       
+       
+       
+
+
+       
+       
+       
+
+
+        
+
+
+        
+
+        
+
+        
+
+
+        
+    </script>
+</body>
+</html>
