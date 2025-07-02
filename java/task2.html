@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<h1 id="Welcomemsg"></h1>
+<hr>
+<button onclick="fun2('ganesh')" >click here
+</button>
+<h1 id="greet"></h1><hr>
+<button onclick="fun3(8)">square<h1 id="sqr"></h1></button><hr>
+<h1 id="sqr"></h1><hr>
+<h1 id="pname"></h1><hr>
+<h1 id="Rgreet"></h1><hr>
+<h1 id="DynamicBilling"></h1><hr>
+<h1 id="bill"></h1><hr>
+
+<h1 id="O1"></h1><hr>
+<h1 id="SmartDiscount"></h1><hr>
+<h1 id="Dcard"></h1><hr>
+<div class="counter-container">
+    <button id="decrement-btn">-</button>
+    <span id="counter">0</span>
+    <button id="increment-btn">+</button>
+</div>
+
+    <script>
+        // 1.
+
+function fun1(){
+    document.getElementById("Welcomemsg").innerText="Welcome to our Restaurant";
+}
+fun1()
+
+
+// 2.
+function fun2(customername){
+  document.getElementById("greet").innerHTML=`Hello, ${customername}!`;
+}
+
+
+// 3.
+function fun3(num){
+document.getElementById("sqr").innerText=num**2;
+}
+fun3()
+
+
+// 4.
+function fun4(productname,price=100){
+    document.getElementById("pname").innerHTML= `Product Name : ${productname}<br> 
+     Price : ${price} Rs`;
+}
+fun4("Sunglasses")
+
+
+// 5.
+function fun5(name="Guest"){
+    document.getElementById("Rgreet").innerHTML=`Hello ${name}!`;
+}
+fun5("hari")
+
+
+// 6.
+function fun6(itemname,quantity,priceperunit){
+   let totalbill=quantity*priceperunit;
+    document.getElementById("DynamicBilling").innerHTML= `<div>
+    <h4>Billing Details</h4>
+    ItemName : ${itemname}<br>
+    Quantity : ${quantity}<br>
+    PricePerUnit : ${priceperunit}<br>
+    TotalBill : ${totalbill}</div>`;
+    }
+fun6('Shirt',2,1500)
+
+
+
+
+
+// 7.
+function fun7(item,price){
+    document.getElementById("O1").innerHTML= `Item : ${item}<br>
+    Price : Rs ${price}`;
+}fun7('dosaa',500)
+
+
+// 8.
+function fun8(amount,discountPercent=10){
+ let finalamount=amount-(discountPercent*0.01);
+ document.getElementById("SmartDiscount").innerText="Final Amount is : "+finalamount;
+}
+fun8(1000)
+
+
+// 9.
+function fun9(cname,iname,quantity,priceperitem){
+    let Totalprice=quantity*priceperitem;
+    document.getElementById("Dcard").innerHTML= `<div class="container">
+    <h3>Order Details</h3>
+    CustomerName : ${cname} <br>
+    ItemName : ${iname} <br>
+    Quantity : ${quantity} <br>
+    PricePerItem : ${priceperitem} <br>
+    TotalPrice : ${Totalprice}<br>
+    </div>`;
+}
+fun9('Ganesh','Smartwatch',2,1500)
+
+
+
+// 10.
+const counterElement = document.getElementById("counter");
+const incrementButton = document.getElementById("increment-btn");
+const decrementButton = document.getElementById("decrement-btn");
+
+let count = 0;
+
+incrementButton.addEventListener("click", () => {
+    count++;
+    counterElement.textContent = count;
+});
+
+decrementButton.addEventListener("click", () => {
+    count--;
+    counterElement.textContent = count;
+});
+
+    </script>
+</body>
+</html>
