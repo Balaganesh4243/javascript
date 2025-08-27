@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript Loop-Based Tasks</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; }
+    h2 { margin-top: 40px; }
+    table { border-collapse: collapse; margin: 10px 0; }
+    table, th, td { border: 1px solid black; padding: 8px; }
+    .card { border: 1px solid #ccc; padding: 10px; margin: 10px 0; }
+  </style>
+</head>
+<body>
+
+  <h1>JavaScript Loop-Based Tasks</h1>
+
+  <h2>1. Product List as Bullet Points</h2>
+  <div id="task1"></div>
+
+  <h2>2. Discount Table</h2>
+  <div id="task2"></div>
+
+  <h2>3. Display Product Cards</h2>
+  <div id="task3"></div>
+
+  <h2>4. Build Order Summary Table</h2>
+  <div id="task4"></div>
+
+  <h2>5. Show Only Products with Stock</h2>
+  <div id="task5"></div>
+
+  <h2>6. Countdown Display</h2>
+  <div id="task6"></div>
+
+  <h2>7. Find Item Until Match</h2>
+  <div id="task7"></div>
+
+  <h2>8. Calculate Cart Total</h2>
+  <div id="task8"></div>
+
+  <script>
+    // Task 1
+let products = ["Laptop", "Mobile", "Camera", "Shoes", "Earphones"];
+    let ul = "<ul>";
+    for (let i = 0; i < products.length; i++) {
+      ul += <li>${products[i]}</li>;
+    }
+    ul += "</ul>";
+    document.getElementById("task1").innerHTML = ul;
+
+    // Task 2
+    let prices = [1000, 2000, 3000, 1500];
+    let table = "<table><tr><th>Original Price</th><th>Discounted Price</th></tr>";
+    for (let i = 0; i < prices.length; i++) {
+      let discounted = prices[i] * 0.9;
+      table += <tr><td>${prices[i]}</td><td>${discounted}</td></tr>;
+    }
+    table += "</table>";
+    document.getElementById("task2").innerHTML = table;
+
+    // Task 3
+    let items = [
+      { name: "Shirt", price: 500, category: "Clothing" },
+      { name: "Watch", price: 1200, category: "Accessories" }
+    ];
+    let cards = "";
+    for (let i = 0; i < items.length; i++) {
+      cards += `
+        <div class="card">
+          <h3>${items[i].name}</h3>
+          <p>Price: ₹${items[i].price}</p>
+          <p>Category: ${items[i].category}</p>
+        </div>
+      `;
+    }
+    document.getElementById("task3").innerHTML = cards;
+
+    // Task 4
+    let orders = [
+      { name: "Pen", quantity: 2, price: 10 },
+      { name: "Notebook", quantity: 1, price: 50 }
+    ];
+    let summary = "<table><tr><th>S.No</th><th>Product</th><th>Quantity</th><th>Price</th><th>Total</th></tr>";
+    for (let i = 0; i < orders.length; i++) {
+      let total = orders[i].quantity * orders[i].price;
+      summary += `<tr>
+        <td>${i + 1}</td>
+        <td>${orders[i].name}</td>
+        <td>${orders[i].quantity}</td>
+        <td>${orders[i].price}</td>
+        <td>${total}</td>
+      </tr>`;
+    }
+    summary += "</table>";
+    document.getElementById("task4").innerHTML = summary;
+
+    // Task 5
+    let stockProducts = [
+      { name: "Keyboard", stock: 3 },
+      { name: "Mouse", stock: 0 },
+      { name: "Charger", stock: 2 }
+    ];
+    let stockList = "";
+    for (let i = 0; i < stockProducts.length; i++) {
+      if (stockProducts[i].stock > 0) {
+        stockList += <p>${stockProducts[i].name} - Stock: ${stockProducts[i].stock}</p>;
+      }
+    }
+    document.getElementById("task5").innerHTML = stockList;
+
+    // Task 6
+    let i = 10;
+    let countdown = "";
+    while (i >= 1) {
+      countdown += <div>${i}</div>;
+      i--;
+    }
+    document.getElementById("task6").innerHTML = countdown;
+
+    // Task 7
+    let itemsList = ["Laptop", "Mobile", "Shoes", "Camera", "Watch"];
+    let match = "";
+    for (let i = 0; i < itemsList.length; i++) {
+      match += <p>${itemsList[i]}</p>;
+      if (itemsList[i] === "Camera") break;
+    }
+    document.getElementById("task7").innerHTML = match;
+
+    // Task 8
+    let cart = [499, 299, 1299, 999];
+    let total = 0;
+    let j = 0;
+    while (j < cart.length) {
+      total += cart[j];
+      j++;
+    }
+    document.getElementById("task8").innerHTML = <h3>Total Cart Value: ₹${total}</h3>;
+  </script>
+
+</body>
+</html>
