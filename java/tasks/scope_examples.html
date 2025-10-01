@@ -1,0 +1,74 @@
+<script>
+    // 1. Question 1
+
+username = "admin"
+function first(){
+     console.log(username)//undefined
+    var username="guest"   
+}
+first()
+console.log(username)//admin (where it acess the global variable)
+
+//2. Question
+let status="online"
+function two(){
+    //console.log(status) if we define here we get  "can't acess before installization"
+    let status="hari"
+    console.log(status)// hari (where function scan the varibles  and print if it match)
+}
+two()
+console.log(status)// online it acess the global variable
+
+//3. Question 
+
+var title="javascript"
+function three(){
+    console.log(title)// javascript
+    title="two"
+    console.log(title)//two (where var is global varible it checks line by line)
+}
+three()
+console.log(title)//two
+//4. Question
+a=10
+b=20
+function four(){
+a=10
+b=20
+console.log(a,b)// 10,20
+}
+four()
+console.log(a,b)//10,20
+
+//5. Question
+var name="teacher"
+function five(){
+    console.log(name)// undifined
+    var name="sir"
+    console.log(name)//sir
+}
+five()
+console.log(name)//teacher
+// if(true)
+// {
+//     var name="ganesh"
+//     console.log(name);
+// }
+// five()
+// console.log(name);//
+
+//function scope//
+
+
+//question 6
+function six(){
+    let name1="prasad"
+    let name2;
+    console.log(name2);//undefined
+}
+six()
+console.log(name1);//not defined (it takes with in block of varible let)
+
+
+//Question 7
+</script>
